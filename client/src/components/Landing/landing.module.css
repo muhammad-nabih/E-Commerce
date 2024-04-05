@@ -1,0 +1,33 @@
+.landing {
+    background-color: #04060ace;
+    height: calc(100vh - 81px);
+    background-image: url(/landing1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.title {
+    font-weight: 900;
+    font-size: 2rem;
+    color: white;
+    padding: 30px;
+    ;
+}
+
+.desc {
+    color: #777;
+    font-size: 1.5rem;
+}
