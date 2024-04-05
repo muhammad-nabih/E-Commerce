@@ -9,7 +9,7 @@ export const useSidebar = () => useContext(SidebarContext);
 // SidebarContext component
 const SidebarProvider = ({ children }) => {
   // State for sidebar visibility
-  const [isShowSidebar, setIsShowSidebar] = useState(false);
+  const [isShowSidebar, setIsShowSidebar] = useState(true);
 
   return (
     <SidebarContext.Provider value={{ isShowSidebar, setIsShowSidebar }}>
