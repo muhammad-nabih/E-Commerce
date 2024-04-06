@@ -1,9 +1,10 @@
-import styles from "./Products.module.css";
 import { useEffect, useState } from "react";
 import { useFetch } from "../../hooks/useFetch/useFetch";
 import { Button } from "flowbite-react";
-import { GrFavorite } from "react-icons/gr";
-import { MdShoppingCart } from "react-icons/md";
+import { Link } from "react-router-dom";
+import styles from "./Products.module.css";
+import { FaRegStar, FaShoppingCart } from "react-icons/fa";
+import Star from "../Star/Star";
 
 const Products = () => {
   const urlImage = import.meta.env.VITE_APP_URL;
@@ -15,41 +16,41 @@ const Products = () => {
 
   const dataProducts = products.map((product) => {
     return (
-      <div key={product.id} className={styles.card}>
-        <div className={styles.imageBox}>
+      <div className={styles.card} key={product.attributes.id}>
+        <div className={styles.imgBox}>
           <div
             className={styles.image}
             style={{
               backgroundImage: `url(${urlImage}${product.attributes.image.data.attributes.url})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
             }}
           ></div>
         </div>
-
-        <div className={styles.content}>
-          <h4 className={styles.title}>{product.attributes.title}</h4>
-          <p className={styles.desc}>
-            <span className={styles.info}>{product.attributes.desc}</span>
-          </p>
-          <span className={styles.price}>
-            {product.attributes.price} دولاراً
-          </span>
-        </div>
-        <div className="flex items-center gap-2 my-2 px-2">
-          <Button
-            className=" flex grow items-center h-10"
-            gradientDuoTone="pinkToOrange"
-          >
-            <MdShoppingCart />
-
-            <span> شراء الأن</span>
-          </Button>
-          <Button color={'failure'} className="grow h-10 flex justify-center items-center bg-red-600">
-            {" "}
-            <GrFavorite fontSize={"1.8rem"} />
-          </Button>
+        <div className="px-5 pb-5">
+          <Link to={"/"}>
+            <h3 className={styles.title}>{product.attributes.title}</h3>
+          </Link>
+          <div className={styles.rating}>
+            <div className="flex gap-1 items-center ">
+              <Star />
+              <Star />
+              <Star />
+              <Star />
+              <Star />
+            </div>
+            <span className="bg-sky-300 text-black  px-3 rounded-md">5.0</span>
+          </div>
+          <div className={styles.shopping}>
+            <div className={styles.price}>
+              {product.attributes.price}
+              <span>دولاراً</span>
+            </div>
+            <Button>
+              <div className="flex gap-1 items-center">
+                <FaShoppingCart />
+                <span>إضافة للسلة</span>
+              </div>
+            </Button>
+          </div>{" "}
         </div>
       </div>
     );

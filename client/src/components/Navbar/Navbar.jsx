@@ -23,12 +23,20 @@ export default function _Navbar() {
         </div>
         <Navbar.Collapse>
           <ul className="flex  flex-col gap-3 md:flex-row md:items-center  py-3">
-            <NavItem to="/" label="الصفحة الرئيسية" icon={<FaHome size={25} />} />
+            <NavItem
+              to="/"
+              label="الصفحة الرئيسية"
+              icon={<FaHome size={25} />}
+            />
             <NavItem to="/services" label="خدماتنا" />
             <NavItem to="/about" label="ماذا عنا" />
             <NavItem to="/pricing" label="اسعارنا" />
             <NavItem to="/contact" label="تواصل معنا" />
-            <NavItem to="/sections" label="فلتر الاقسام" icon={<CiFilter size={25} />} />
+            <NavItem
+              to="/sections"
+              label="فلتر الاقسام"
+              icon={<CiFilter size={25} />}
+            />
           </ul>
         </Navbar.Collapse>
       </Navbar>
