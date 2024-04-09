@@ -7,15 +7,16 @@ import { CiFilter } from "react-icons/ci";
 export default function _Navbar() {
   return (
     <nav className="shadow-md sticky top-0 z-50 w-full">
-      <Navbar fluid className="bg-gray-950 text-zinc-50 w-full">
+      <Navbar fluid className="bg-gray-950 text-zinc-50 w-full flex-nowrap">
         <Navbar.Brand href="/" className="py-3">
           <img
             src="/ecommerce.svg"
             className="mr-3 h-6 sm:h-9"
             alt="Flowbite React Logo"
           />
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white-50">
-            متجر للأجهزة التعليمية
+          <span className="self-center whitespace-nowrap mx-2 text-xl font-extrabold dark:text-white-50 text-sky-400">
+            إلكتروماركت{" "}
+            
           </span>
         </Navbar.Brand>
         <div className="flex md:order-2">

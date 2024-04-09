@@ -1,33 +1,81 @@
 .landing {
-    background-color: #04060ace;
     height: calc(100vh - 81px);
-    background-image: url(/landing1.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: overlay;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
 
-.info {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-    text-align: center;
+
+.clip {
+    background-image: url('/net.avif');
+    background-color: #00000052;
+    background-blend-mode: overlay;
+
 }
+
+
+
+
+
+.box {
+    direction: rtl;
+    color: white;
+    text-align: center;
+    width: 92%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+
 
 .title {
+    font-size: 2.2rem;
     font-weight: 900;
-    font-size: 2rem;
-    color: white;
-    padding: 30px;
-    ;
+    line-height: 2;
+    color: #33ade3;
 }
 
 .desc {
-    color: #777;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    color: #f9dddd;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 1.5rem;
+        line-height: 1.8;
+
+    }
+
+    .desc {
+        font-size: 1rem;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.3rem;
+        line-height: 1.8;
+
+    }
+
+    .desc {
+        font-size: .8rem;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 560px) {
+    .title {
+        font-size: 1rem;
+        line-height: 1.6;
+
+    }
+
+    .desc {
+        font-size: .6rem;
+        margin-top: 10px;
+    }
 }

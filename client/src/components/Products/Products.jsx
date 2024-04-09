@@ -3,7 +3,7 @@ import { useFetch } from "../../hooks/useFetch/useFetch";
 import { Button } from "flowbite-react";
 import { Link } from "react-router-dom";
 import styles from "./Products.module.css";
-import { FaRegStar, FaShoppingCart } from "react-icons/fa";
+import {  FaShoppingCart } from "react-icons/fa";
 import Star from "../Star/Star";
 
 const Products = () => {

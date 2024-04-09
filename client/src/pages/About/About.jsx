@@ -5,12 +5,12 @@ import Typewriter from "typewriter-effect";
 const About = () => {
   // قائمة بأسماء الطلاب وصورهم
   const students = [
-    { name: "زياد", image: "/zeyad.jpg", jobTitle: "Frontend Dev" },
-    { name: "امنية", image: "/woman.jpg", jobTitle: "Frontend Dev" },
-    { name: "اسراء", image: "/woman.jpg", jobTitle: "DashBoard Dev" },
+    { name: "زياد", image: "/zyad.png", jobTitle: "Frontend Dev" },
+    { name: "امنية", image: "/omnia.png", jobTitle: "Frontend Dev" },
+    { name: "اسراء", image: "/esraa.png", jobTitle: "DashBoard Dev" },
     { name: "محمد", image: "/mohamed.png", jobTitle: "Backend Dev" },
-    { name: "ياسمين", image: "/woman.jpg", jobTitle: "Backend Dev" },
-    { name: "اشرقت", image: "/woman.jpg", jobTitle: "Database Dev" },
+    { name: "ياسمين", image: "/yasmeen.png", jobTitle: "Backend Dev" },
+    { name: "اشرقت", image: "/ashraqat.png", jobTitle: "Database Dev" },
   ];
 
   return (
@@ -19,7 +19,6 @@ const About = () => {
       <Categories />
       <div className="container mx-auto py-12">
         <h1 className="text-3xl font-semibold mb-6 w-fit border-sky-900 p-2 border-b-2">
-       
           معلومات عنا
         </h1>
         <p className="text-lg mb-8 bg-zinc-900 text-zinc-200 p-3 min-h-36">
