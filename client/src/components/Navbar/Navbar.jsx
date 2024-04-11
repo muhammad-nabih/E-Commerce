@@ -16,7 +16,6 @@ export default function _Navbar() {
           />
           <span className="self-center whitespace-nowrap mx-2 text-xl font-extrabold dark:text-white-50 text-sky-400">
             إلكتروماركت{" "}
-            
           </span>
         </Navbar.Brand>
         <div className="flex md:order-2">
@@ -29,9 +28,9 @@ export default function _Navbar() {
               label="الصفحة الرئيسية"
               icon={<FaHome size={25} />}
             />
-            <NavItem to="/services" label="خدماتنا" />
+
             <NavItem to="/about" label="ماذا عنا" />
-            <NavItem to="/pricing" label="اسعارنا" />
+
             <NavItem to="/contact" label="تواصل معنا" />
             <NavItem
               to="/sections"

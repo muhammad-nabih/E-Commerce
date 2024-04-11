@@ -13,7 +13,7 @@ export const Categories = () => {
     data && setCategories(data);
   }, [data]);
   return (
-    <div className="categories" style={{ left: isShowSidebar ? "100%" : "0" }}>
+    <div className="categories" style={{ right: isShowSidebar ? "-100%" : "0" }}>
       <div className="bg-blue-800 flex w-full p-3 justify-between items-center ">
         <h1 className="font-extrabold flex items-center gap-2">
           <CiFilter size={25} />

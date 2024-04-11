@@ -1,4 +1,4 @@
-import "./App.css";
+
 import { useEffect } from "react"; // استيراد useEffect
 import { Categories } from "./components/Categories/Categories";
 import Landing from "./components/Landing/Landing";

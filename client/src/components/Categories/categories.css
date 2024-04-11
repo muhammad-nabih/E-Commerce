@@ -1,22 +1,23 @@
 .categories {
     display: flex;
     flex-direction: column;
+    display: flex;
+    flex-direction: column;
     align-items: start;
     color: white;
     box-shadow: 0 4px 2px -2px rgb(0, 0, 0);
     align-items: center;
     justify-content: start;
     position: fixed;
-    width: 30%;
     height: calc(100vh - 85px);
     top: 85px;
     z-index: 1000;
     background-color: rgba(0, 55, 86, 0.351);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    width: 100%;
+    width: 50%;
     transition: .3s;
-    left: -100%;
+    right: -100%;
 
 }
 
@@ -38,4 +39,12 @@
     width: 100%;
     padding: 20px 30px;
     border-bottom: 1px solid #777;
+}
+
+
+
+@media (max-width: 992px) {
+    .categories{
+        width: 100%;
+    }
 }
