@@ -1,9 +1,11 @@
+import { Categories } from "../../components/Categories/Categories";
 import Navbar from "../../components/Navbar/Navbar";
 function Contact() {
   return (
     <div>
+      <Categories />
       <Navbar />
-      Contact
+<div></div>
     </div>
   );
 }

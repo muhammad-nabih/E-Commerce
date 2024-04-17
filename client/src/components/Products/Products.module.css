@@ -12,10 +12,10 @@
 
 .card {
     box-shadow: rgba(0, 0, 0, 0.82) 0px 4px 9px;
-    background-color: #1f2937;
+    background-color: #293949;
     color: #f3f4f4;
     align-items: start;
-    border-radius: 10px;
+    border-radius: 6px;
     overflow: hidden;
     position: relative;
 
@@ -24,10 +24,11 @@
 .imgBox {
     overflow: hidden;
     width: 100%;
-    padding: 20px;
+    padding-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .image {
@@ -43,8 +44,7 @@
 }
 
 .image:hover {
-    scale: 1.2;
-    filter: blur(2px);
+    transform: scale(1.1) rotate(-3deg);
 }
 
 .title {
@@ -58,10 +58,12 @@
 }
 
 .rating {
+
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 20px 0;
+
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .shopping {

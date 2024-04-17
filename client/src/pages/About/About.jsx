@@ -5,6 +5,7 @@ import styles from "./About.module.css";
 import { IoCloseSharp } from "react-icons/io5";
 import TimelineComponent from "../../components/Timeline/Timeline";
 import { Button, Avatar } from "flowbite-react";
+import { Categories } from "../../components/Categories/Categories";
 
 const About = () => {
   const students = [
@@ -59,10 +60,11 @@ const About = () => {
   return (
     <>
       <Navbar />
+      <Categories />
       <div className={styles.about}>
-        <div className="container mx-auto ">
+        <div className="container mx-auto overflow-hidden">
           <motion.h1
-            className="text-3xl font-semibold mb-6 w-fit border-sky-900 p-2 border-b-2"
+            className="text-3xl font-semibold mb-6 w-fit border-sky-900 p-2 border-b-2 my-5 "
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -73,7 +75,7 @@ const About = () => {
             {students.map((student, index) => (
               <motion.div
                 key={index}
-                className="flex flex-col items-center"
+                className="flex flex-col items-center max-sm:size-32 mx-auto my-6"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ duration: 0.3 }}
@@ -136,7 +138,8 @@ const About = () => {
               </motion.div>
             </motion.div>
           )}
-        <TimelineComponent />
+
+          <TimelineComponent />
         </div>
       </div>
     </>

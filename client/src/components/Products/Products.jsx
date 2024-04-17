@@ -17,8 +17,8 @@ const Products = () => {
   }, [data]);
 
   const renderProducts = () => {
-    return products.map((product) => (
-      <div className={styles.card} key={product.attributes.id}>
+    return products.map((product, index) => (
+      <div className={styles.card} key={index}>
         <div className={styles.imgBox}>
           <div
             className={styles.image}
@@ -32,12 +32,12 @@ const Products = () => {
             <h3 className={styles.title}>{product.attributes.title}</h3>
           </Link>
           <div className={styles.rating}>
-            <div className="flex gap-1 items-center ">
-              {[...Array(5)].map((_, index) => (
-                <Star key={index} />
-              ))}
+            <div className="flex gap-1 items-center flex-row-reverse ">
+              <Star stars={product.attributes.rating} />
             </div>
-            <span className="bg-sky-300 text-black px-3 rounded-md">5.0</span>
+            <span className="bg-sky-300 text-black px-3 rounded-md">
+              {product.attributes.rating.toFixed(1)}
+            </span>
           </div>
           <div className={styles.shopping}>
             <div className={styles.price}>

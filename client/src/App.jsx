@@ -1,4 +1,3 @@
-
 import { useEffect } from "react"; // استيراد useEffect
 import { Categories } from "./components/Categories/Categories";
 import Landing from "./components/Landing/Landing";
@@ -6,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Products from "./components/Products/Products";
 import { fetchApi } from "./hooks/fetchApi/fetchApi";
 import SidebarProvider from "./contexts/sidebarContext/SidebarContext";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   useEffect(() => {
@@ -26,6 +26,7 @@ function App() {
         <Categories />
         <Landing />
         <Products />
+        <Footer />
       </SidebarProvider>
     </>
   );

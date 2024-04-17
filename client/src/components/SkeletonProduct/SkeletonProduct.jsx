@@ -1,9 +1,9 @@
 export const SkeletonProduct = () => {
   return (
-    <div>
+ 
       <div
         role="status"
-        className="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700"
+        className="w-full p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700"
       >
         <div className="flex items-center justify-center h-48 p-5 mb-4 bg-gray-300 rounded dark:bg-gray-700">
           <img
@@ -19,6 +19,6 @@ export const SkeletonProduct = () => {
         {/* مش بتظهر الا في قارئ الشاشة بتقول للشخص انه في عملية تحميل حاليا  */}
         <span className="sr-only">يتم تحميل المنتجات </span>
       </div>
-    </div>
+
   );
 };

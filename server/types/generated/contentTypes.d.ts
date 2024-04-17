@@ -857,6 +857,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'manyToMany',
       'api::subcategory.subcategory'
     >;
+    rating: Attribute.Float;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

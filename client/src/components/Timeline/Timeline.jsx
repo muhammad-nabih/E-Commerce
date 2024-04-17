@@ -1,12 +1,18 @@
 import { Timeline } from "flowbite-react";
 import { HiCalendar } from "react-icons/hi";
+import { motion } from "framer-motion";
 
 export default function TimelineComponent() {
   return (
-    <Timeline
-      style={{ direction: "ltr !important" }}
-      className="container mx-auto  w-10/12 my-24"
-    >
+    <Timeline style={{}} className="container mx-auto  w-10/12 my-24">
+      <motion.h2
+        className="font-bold cursor-pointer bg-slate-950 text-sky-400 text-2xl rounded w-fit p-2 my-5 max-sm:text-sm"
+        animate={{ y: [0, -10, 0], opacity: [0, 1] }}
+        whileHover={{ scale: 0.9 }}
+      >
+        المخطط الزمني للانتهاء من المشروع
+      </motion.h2>
+
       <Timeline.Item>
         <Timeline.Point icon={HiCalendar} />
         <Timeline.Content>

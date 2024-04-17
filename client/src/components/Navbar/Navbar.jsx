@@ -5,6 +5,7 @@ import { FaHome } from "react-icons/fa";
 import { CiFilter } from "react-icons/ci";
 
 export default function _Navbar() {
+
   return (
     <nav className="shadow-md sticky top-0 z-50 w-full">
       <Navbar fluid className="bg-gray-950 text-zinc-50 w-full flex-nowrap">
@@ -30,7 +31,6 @@ export default function _Navbar() {
             />
 
             <NavItem to="/about" label="ماذا عنا" />
-
             <NavItem to="/contact" label="تواصل معنا" />
             <NavItem
               to="/sections"

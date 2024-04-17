@@ -7,7 +7,7 @@ import About from "./pages/About/About.jsx";
 import NotFoundPage from "./components/NotFoundPage/NotFoundPage.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
 import { Services } from "./pages/Services/Services.jsx";
-import Pricing from "./pages/Pricing/Pricing.jsx";
+
 import SidebarProvider from "./contexts/sidebarContext/SidebarContext.jsx";
 
 const router = createBrowserRouter([
@@ -30,18 +30,12 @@ const router = createBrowserRouter([
     path: "/contact",
     element: <Contact />,
     errorElement: <NotFoundPage />,
-  },
-  {
-    path: "/pricing",
-    element: <Pricing />,
-    errorElement: <NotFoundPage />,
-  },
+  }
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <SidebarProvider>
-
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </SidebarProvider>
   </React.StrictMode>
 );

@@ -2,8 +2,7 @@ import { NavLink } from "react-router-dom";
 import { useSidebar } from "../../contexts/sidebarContext/SidebarContext";
 
 const NavItem = ({ to, label, icon }) => {
-  const { setIsShowSidebar, isShowSidebar } = useSidebar();
-  console.log(isShowSidebar);
+  const { isShowSidebar, setIsShowSidebar } = useSidebar();
   return (
     <li>
       <NavLink
