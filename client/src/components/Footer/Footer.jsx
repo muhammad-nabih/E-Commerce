@@ -45,17 +45,14 @@ const Footer = () => {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://github.com/themesberg/flowbite"
+                    href="https://github.com/muhammad-nabih/E-Commerce"
                     className="hover:underline "
                   >
                     Github
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://discord.gg/4eeurUVvTy"
-                    className="hover:underline"
-                  >
+                  <a href="/" className="hover:underline">
                     Discord
                   </a>
                 </li>
@@ -101,14 +98,14 @@ const Footer = () => {
               href="#"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
-             <FaDiscord/>
+              <FaDiscord />
               <span className="sr-only">Discord community</span>
             </a>
             <a
               href="#"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
-              <FaTwitter/>
+              <FaTwitter />
               <span className="sr-only">Twitter page</span>
             </a>
             <a

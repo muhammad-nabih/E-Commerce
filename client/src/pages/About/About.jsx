@@ -6,7 +6,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import TimelineComponent from "../../components/Timeline/Timeline";
 import { Button, Avatar } from "flowbite-react";
 import { Categories } from "../../components/Categories/Categories";
-
+import Footer from "../../components/Footer/Footer";
 const About = () => {
   const students = [
     {
@@ -142,6 +142,7 @@ const About = () => {
           <TimelineComponent />
         </div>
       </div>
+      <Footer />
     </>
   );
 };
