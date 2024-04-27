@@ -1,34 +1,38 @@
-import { useEffect } from "react"; // استيراد useEffect
-import { Categories } from "./components/Categories/Categories";
-import Landing from "./components/Landing/Landing";
 import Navbar from "./components/Navbar/Navbar";
+import Landing from "./components/Landing/Landing";
+import { Categories } from "./components/Categories/Categories";
 import Products from "./components/Products/Products";
-import { fetchApi } from "./hooks/fetchApi/fetchApi";
-import SidebarProvider from "./contexts/sidebarContext/SidebarContext";
 import Footer from "./components/Footer/Footer";
-
+import SidebarProvider from "./contexts/sidebarContext/SidebarContext";
+import storeContext from "./contexts/storeContext/storeContext";
+import { useState } from "react";
+import Cart from "./components/Cart/Cart";
+import CartProvider from "./contexts/CartContext/CartContext";
 function App() {
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const res = await fetchApi.get("/products");
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      }
-    };
-    fetchProducts();
-  }, []); // تمرير مصفوفة فارغة كتابيه لضمان تنفيذ الكود مرة واحدة عندما يتم تحميل المكون
+  const [filter, setFilter] = useState("/products?populate=*");
+  const [selectedCategory, setSelectedCategory] = useState([]);
 
   return (
-    <>
-      <SidebarProvider>
+    <SidebarProvider>
+      <CartProvider>
+        <Cart />
         <Navbar />
+      </CartProvider>
+      <storeContext.Provider
+        value={{ filter, setFilter, selectedCategory, setSelectedCategory }}
+      >
         <Categories />
-        <Landing />
-        <Products />
-        <Footer />
-      </SidebarProvider>
-    </>
+      </storeContext.Provider>
+      <Landing />
+      <storeContext.Provider
+        value={{ filter, setFilter, selectedCategory, setSelectedCategory }}
+      >
+        <CartProvider>
+          <Products />
+        </CartProvider>
+      </storeContext.Provider>
+      <Footer />
+    </SidebarProvider>
   );
 }
 

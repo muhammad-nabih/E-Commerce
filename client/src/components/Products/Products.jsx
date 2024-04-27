@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useFetch } from "../../hooks/useFetch/useFetch";
 import { Button } from "flowbite-react";
 import { Link } from "react-router-dom";
@@ -6,12 +6,17 @@ import styles from "./Products.module.css";
 import { FaShoppingCart } from "react-icons/fa";
 import Star from "../Star/Star";
 import { SkeletonProduct } from "../SkeletonProduct/SkeletonProduct";
-
+import storeContext from "../../contexts/storeContext/storeContext";
+import { addToCart } from "../../redux/cartReducer";
+import { useDispatch } from "react-redux";
+import { useCart } from "../../contexts/CartContext/CartContext";
 const Products = () => {
+  const { filter } = useContext(storeContext);
+  const { setOpen } = useCart();
   const urlImage = import.meta.env.VITE_APP_URL;
-  const { data, loading } = useFetch("products");
+  const { data, loading } = useFetch(filter);
   const [products, setProducts] = useState(data || []);
-
+  const dispatch = useDispatch();
   useEffect(() => {
     if (data) setProducts(data);
   }, [data]);
@@ -43,7 +48,20 @@ const Products = () => {
             <div className={styles.price}>
               {product.attributes.price} <span>دولاراً</span>
             </div>
-            <Button>
+            <Button
+              onClick={() =>
+                dispatch(
+                  addToCart({
+                    id: product.id,
+                    title: product.attributes.title,
+                    desc: product.attributes.desc,
+                    price: product.attributes.price,
+                    image:
+                      urlImage + product.attributes.image.data.attributes.url,
+                  })
+                )
+              }
+            >
               <div className="flex gap-1 items-center">
                 <FaShoppingCart />
                 <span>إضافة للسلة</span>

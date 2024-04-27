@@ -5,8 +5,8 @@ import styles from "./About.module.css";
 import { IoCloseSharp } from "react-icons/io5";
 import TimelineComponent from "../../components/Timeline/Timeline";
 import { Button, Avatar } from "flowbite-react";
-import { Categories } from "../../components/Categories/Categories";
 import Footer from "../../components/Footer/Footer";
+import TitleSection from "../../components/TitleSection/TitleSection";
 const About = () => {
   const students = [
     {
@@ -60,17 +60,10 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <Categories />
+
       <div className={styles.about}>
         <div className="container mx-auto overflow-hidden">
-          <motion.h1
-            className="text-3xl font-semibold mb-6 w-fit border-sky-900 p-2 border-b-2 my-5 "
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            معلومات عنا
-          </motion.h1>
+          <TitleSection firstPiece={"معلومات"} secondPiece={"عنا"} />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
             {students.map((student, index) => (
               <motion.div

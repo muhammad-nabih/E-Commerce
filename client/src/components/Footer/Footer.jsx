@@ -2,7 +2,7 @@ import { FaDiscord, FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-gray-900">
+    <footer className="bg-zinc-50 dark:bg-gray-900">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
@@ -91,35 +91,35 @@ const Footer = () => {
               href="#"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
-              <FaFacebook />
+              <FaFacebook size={22} color="#1877f2" />
               <span className="sr-only">Facebook page</span>
             </a>
             <a
               href="#"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
-              <FaDiscord />
+              <FaDiscord size={22} color="#5865f2" />
               <span className="sr-only">Discord community</span>
             </a>
             <a
               href="#"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
-              <FaTwitter />
+              <FaTwitter size={22} color="#1da1f2" />
               <span className="sr-only">Twitter page</span>
             </a>
             <a
               href="#"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
-              <FaGithub />
+              <FaGithub size={22} color="#4078c0" />
               <span className="sr-only">GitHub account</span>
             </a>
             <a
               href="#"
               className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
-              <img src="/ecommerce.svg" alt="" />
+              <img src="/ecommerce.svg" alt="ecommerce" />
               <span className="sr-only">Dribbble account</span>
             </a>
           </div>

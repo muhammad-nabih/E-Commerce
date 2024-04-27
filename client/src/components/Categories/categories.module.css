@@ -11,11 +11,11 @@
     position: fixed;
     height: calc(100vh - 85px);
     top: 85px;
-    z-index: 1000;
+    z-index: 40;
     background-color: rgba(0, 55, 86, 0.351);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    width: 50%;
+    width: 25%;
     transition: .3s;
     right: -100%;
 

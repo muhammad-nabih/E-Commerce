@@ -7,7 +7,7 @@ const NavItem = ({ to, label, icon }) => {
     <li>
       <NavLink
         className={`font-bold mx-4 sm:mx-0 max-sm:py-2 px-4 py-2 flex items-center gap-2 rounded ${
-          !isShowSidebar && to === "/sections" ? "bg-blue-800" : ""
+          !isShowSidebar && to === "/sections" ? "text-sky-400" : ""
         }`}
         to={to}
         onClick={(e) => {
