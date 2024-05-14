@@ -1,13 +1,18 @@
-![image](https://github.com/muhammad-nabih/E-Commerce/assets/86538085/2ec6ed09-321a-43d2-a9ae-63ee09d94e24)
-![image](https://github.com/muhammad-nabih/E-Commerce/assets/86538085/04076690-3351-4310-bdbd-527f3fc44fd8)
-![image](https://github.com/muhammad-nabih/E-Commerce/assets/86538085/96edbb53-24a8-4053-8e00-e2e7d73aeccf)
-![image](https://github.com/muhammad-nabih/E-Commerce/assets/86538085/26f5bdea-6597-4764-a802-4070f134b383)
-![image](https://github.com/muhammad-nabih/E-Commerce/assets/86538085/884f2eff-4c88-46d9-a038-408f5de077a8)
 # E-commerce Project
 
 ## Overview
 
 This project is an E-commerce platform that includes both a frontend and a backend. The frontend is built using React, while the backend is powered by Strapi, a headless CMS.
+
+![image](https://github.com/muhammad-nabih/E-Commerce/assets/86538085/2ec6ed09-321a-43d2-a9ae-63ee09d94e24)
+
+![image](https://github.com/muhammad-nabih/E-Commerce/assets/86538085/04076690-3351-4310-bdbd-527f3fc44fd8)
+
+![image](https://github.com/muhammad-nabih/E-Commerce/assets/86538085/96edbb53-24a8-4053-8e00-e2e7d73aeccf)
+
+![image](https://github.com/muhammad-nabih/E-Commerce/assets/86538085/26f5bdea-6597-4764-a802-4070f134b383)
+
+![image](https://github.com/muhammad-nabih/E-Commerce/assets/86538085/884f2eff-4c88-46d9-a038-408f5de077a8)
 
 ## Project Structure
 
