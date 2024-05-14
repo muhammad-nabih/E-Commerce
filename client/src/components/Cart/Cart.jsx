@@ -7,14 +7,13 @@ import { useCart } from "../../contexts/CartContext/CartContext";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart, resetCart } from "../../redux/cartReducer";
 import { FaTrash } from "react-icons/fa";
-
 export default function Cart() {
   const { open, setOpen } = useCart();
   const products = useSelector((state) => state.cart.products);
 
   useEffect(() => {
     products.length > 0 ? setOpen(true) : "";
-  }, [products.length]);
+  }, [products.length, setOpen]);
   const dispatch = useDispatch();
   return (
     <div className="z-50">
@@ -95,7 +94,7 @@ export default function Cart() {
                                     <div>
                                       <div className="flex justify-between text-base font-medium text-gray-900">
                                         <h3>{product.title}</h3>
-                                        <p className="ml-4 text-violet-900  px-1 flex  gap-1 items-start">
+                                        <p className="ml-4 text-violet-950  font-bold px-1 flex gap-1 items-start">
                                           <span> {product.price}</span>
 
                                           <span> دولاراً</span>
@@ -133,8 +132,10 @@ export default function Cart() {
 
                       <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                         <div className="flex justify-between text-base font-medium text-gray-900">
-                          <p>إجمالي السعر</p>
-                          <p>
+                          <p className="font-bold text-orange-600 text-lg">
+                            إجمالي السعر
+                          </p>
+                          <p className="font-bold  text-lg">
                             {products.reduce(
                               (total, product) => total + product.price,
                               0

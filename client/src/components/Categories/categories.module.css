@@ -15,9 +15,11 @@
     background-color: rgba(0, 55, 86, 0.351);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    width: 25%;
+    width:30%;
     transition: .3s;
     right: -100%;
+    padding-bottom: 20px; ;
+
 
 }
 

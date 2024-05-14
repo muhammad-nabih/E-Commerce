@@ -9,6 +9,12 @@ import Footer from "../../components/Footer/Footer";
 import TitleSection from "../../components/TitleSection/TitleSection";
 const About = () => {
   const students = [
+    // {
+    //   name: "أ.د.نشوي",
+    //   image: "/DoctorNashawa.png",
+    //   jobTitle: "IT Doctor",
+    //   info: "استاذ تكنولوجيا التعليم - مدير مركز تكنولوجيا التعليم  بجامعة دمياط - المشرف علي المشروع",
+    // },
     {
       name: "زياد",
       image: "/zyad.png",

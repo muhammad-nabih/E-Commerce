@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import  { useState, useContext, useEffect } from "react";
 import { useFetch } from "../../hooks/useFetch/useFetch";
 import { Button } from "flowbite-react";
 import { Link } from "react-router-dom";
@@ -9,22 +9,32 @@ import { SkeletonProduct } from "../SkeletonProduct/SkeletonProduct";
 import storeContext from "../../contexts/storeContext/storeContext";
 import { addToCart } from "../../redux/cartReducer";
 import { useDispatch } from "react-redux";
-import { useCart } from "../../contexts/CartContext/CartContext";
+import ProductDetails from "../ProductDetails/ProductDetails";
+
 const Products = () => {
+const urlImage=  import.meta.env.VITE_APP_URL;
   const { filter } = useContext(storeContext);
-  const { setOpen } = useCart();
-  const urlImage = import.meta.env.VITE_APP_URL;
   const { data, loading } = useFetch(filter);
   const [products, setProducts] = useState(data || []);
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const dispatch = useDispatch();
+
   useEffect(() => {
     if (data) setProducts(data);
   }, [data]);
 
+  const handleProductClick = (productId) => {
+    const product = products.find((product) => product.id === productId);
+    setSelectedProduct(product);
+  };
+
   const renderProducts = () => {
     return products.map((product, index) => (
       <div className={styles.card} key={index}>
-        <div className={styles.imgBox}>
+        <div
+          className={styles.imgBox}
+          onClick={() => handleProductClick(product.id)}
+        >
           <div
             className={styles.image}
             style={{
@@ -88,7 +98,15 @@ const Products = () => {
       {loading ? (
         <div className={styles.productsContainer}>{renderSkeletons()}</div>
       ) : (
-        <div className={styles.productsContainer}>{renderProducts()}</div>
+        <>
+          <div className={styles.productsContainer}>{renderProducts()}</div>
+          {selectedProduct && (
+            <ProductDetails
+              product={selectedProduct}
+              onClose={() => setSelectedProduct(null)}
+            />
+          )}
+        </>
       )}
     </>
   );
