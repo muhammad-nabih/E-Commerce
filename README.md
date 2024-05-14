@@ -84,6 +84,6 @@ The backend part of the project is located in the `server` directory. It is a St
 2. cd client
 
 ## Install dependencies:
-1.npm install
-2.npm run dev
 
+- npm install
+- npm run dev
