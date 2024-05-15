@@ -6,7 +6,7 @@ import "./index.css";
 import About from "./pages/About/About.jsx";
 import NotFoundPage from "./components/NotFoundPage/NotFoundPage.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
-import { Services } from "./pages/Services/Services.jsx";
+
 import SidebarProvider from "./contexts/sidebarContext/SidebarContext.jsx";
 import { persistor, store } from "./redux/store.js";
 import { Provider } from "react-redux";
@@ -23,11 +23,7 @@ const router = createBrowserRouter([
     element: <About />,
     errorElement: <NotFoundPage />,
   },
-  {
-    path: "/services",
-    element: <Services />,
-    errorElement: <NotFoundPage />,
-  },
+
   {
     path: "/contact",
     element: <Contact />,

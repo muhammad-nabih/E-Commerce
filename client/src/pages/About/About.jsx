@@ -8,13 +8,23 @@ import { Button, Avatar } from "flowbite-react";
 import Footer from "../../components/Footer/Footer";
 import TitleSection from "../../components/TitleSection/TitleSection";
 const About = () => {
+const doctors = [
+  {
+    name: "أ.د.نشوي",
+    image: "/DoctorNashawa.png",
+    jobTitle: "IT Doctor",
+    info: "استاذ تكنولوجيا التعليم - مدير مركز تكنولوجيا التعليم  بجامعة دمياط - المشرف علي المشروع",
+  },
+  {
+    name: "د.روان",
+    image: "/rawan.png",
+    jobTitle: "IT Doctor",
+    info:"معيد بكلية التربية -قسم تكنولوجيا التعليم - المشرف المباشر علي المشروع والآخذ بزمام الامور "
+  },
+];
+
   const students = [
-    // {
-    //   name: "أ.د.نشوي",
-    //   image: "/DoctorNashawa.png",
-    //   jobTitle: "IT Doctor",
-    //   info: "استاذ تكنولوجيا التعليم - مدير مركز تكنولوجيا التعليم  بجامعة دمياط - المشرف علي المشروع",
-    // },
+
     {
       name: "زياد",
       image: "/zyad.png",
@@ -70,28 +80,54 @@ const About = () => {
       <div className={styles.about}>
         <div className="container mx-auto overflow-hidden">
           <TitleSection firstPiece={"معلومات"} secondPiece={"عنا"} />
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-            {students.map((student, index) => (
-              <motion.div
-                key={index}
-                className="flex flex-col items-center max-sm:size-32 mx-auto my-6"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ duration: 0.3 }}
-                onClick={() => handleClick(student)}
-              >
-                <motion.img
-                  src={student.image}
-                  alt={student.name}
-                  className="w-44 h-44 rounded-full mb-2 border-2 border-blue-700 shadow-2xl duration-300 cursor-pointer"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                />
-                <p className="text-lg font-semibold">{student.name}</p>
-                <p className="text-sm">{student.jobTitle}</p>
-              </motion.div>
-            ))}
+          <div className="divide-y-2">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 max-md:pb-5">
+              {doctors.map((doctor, index) => (
+                <motion.div
+                  key={index}
+                  className="flex flex-col items-center max-sm:size-32 mx-auto my-6"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
+                  onClick={() => handleClick(doctor)}
+                >
+                  <motion.img
+                    src={doctor.image}
+                    alt={doctor.name}
+                    className="w-44 h-44 rounded-full mb-2 border-2 border-blue-700 shadow-2xl duration-300 cursor-pointer"
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  />
+                  <p className="text-lg font-semibold">{doctor.name}</p>
+                  <p className="text-sm">{doctor.jobTitle}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 max-md:my-5">
+              {students.map((student, index) => (
+                <motion.div
+                  key={index}
+                  className="flex flex-col items-center max-sm:size-32 mx-auto my-6"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
+                  onClick={() => handleClick(student)}
+                >
+                  <motion.img
+                    src={student.image}
+                    alt={student.name}
+                    className="w-44 h-44 rounded-full mb-2 border-2 border-blue-700 shadow-2xl duration-300 cursor-pointer"
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  />
+                  <p className="text-lg font-semibold">{student.name}</p>
+                  <p className="text-sm">{student.jobTitle}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
           {selectedStudent && (
             <motion.div
