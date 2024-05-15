@@ -12,7 +12,7 @@ This project is an E-commerce platform that includes both a frontend and a backe
 
 ![image](https://github.com/muhammad-nabih/E-Commerce/assets/86538085/26f5bdea-6597-4764-a802-4070f134b383)
 
-![image](https://github.com/muhammad-nabih/E-Commerce/assets/86538085/884f2eff-4c88-46d9-a038-408f5de077a8)
+![image](https://**github**.com/muhammad-nabih/E-Commerce/assets/86538085/884f2eff-4c88-46d9-a038-408f5de077a8)
 
 ## Project Structure
 
