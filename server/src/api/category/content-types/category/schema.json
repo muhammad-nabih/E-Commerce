@@ -4,7 +4,8 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-    "displayName": "category"
+    "displayName": "category",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,17 +18,17 @@
     "desc": {
       "type": "text"
     },
-    "subcategories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::subcategory.subcategory",
-      "mappedBy": "products"
-    },
     "products": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::product.product",
-      "mappedBy": "subcategories"
+      "mappedBy": "categories"
+    },
+    "subcategories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subcategory.subcategory",
+      "mappedBy": "categories"
     }
   }
 }
