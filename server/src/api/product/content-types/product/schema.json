@@ -16,7 +16,7 @@
       "type": "string"
     },
     "desc": {
-      "type": "text"
+      "type": "string"
     },
     "image": {
       "type": "media",
@@ -29,11 +29,14 @@
         "audios"
       ]
     },
-    "price": {
+    "pirce": {
       "type": "float"
     },
     "isFeature": {
       "type": "boolean"
+    },
+    "rating": {
+      "type": "float"
     },
     "categories": {
       "type": "relation",
@@ -44,11 +47,8 @@
     "subcategories": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::subcategory.subcategory",
+      "target": "api::category.category",
       "inversedBy": "products"
-    },
-    "rating": {
-      "type": "float"
     }
   }
 }

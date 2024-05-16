@@ -17,27 +17,17 @@
     "desc": {
       "type": "text"
     },
-    "image": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
+    "subcategories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subcategory.subcategory",
+      "mappedBy": "products"
     },
     "products": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::product.product",
-      "mappedBy": "categories"
-    },
-    "subcategories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::subcategory.subcategory",
-      "mappedBy": "categories"
+      "mappedBy": "subcategories"
     }
   }
 }
